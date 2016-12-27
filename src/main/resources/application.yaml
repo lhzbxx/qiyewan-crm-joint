@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active: pro
+  application:
+    name: crm-joint
+server:
+  error:
+    whitelabel:
+      enabled: false
+  port: 8082
