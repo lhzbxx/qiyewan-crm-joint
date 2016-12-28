@@ -5,11 +5,13 @@ import com.qiyewan.crm_joint.common.OrderDetail;
 import lombok.Data;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Date;
 
 @Entity(name = "m_website_order")
 @Data
 public class WebsiteOrder {
+    @Id
     private Long id;
     private String area;
     private String orderNo;
@@ -17,7 +19,6 @@ public class WebsiteOrder {
     private String customerId;
     private String productNo;
     private String productName;
-    private String productCover;
     private Integer productNumber;
     private Float productAmount;
     private Date startDate;
@@ -34,7 +35,6 @@ public class WebsiteOrder {
         this.productNo = orderDetail.getProductSerialId();
         this.productName = orderDetail.getName();
         this.productNumber = orderDetail.getAmount();
-        this.productCover = orderDetail.getCover();
         this.productAmount = orderDetail.getUnitPrice();
     }
 }

@@ -3,6 +3,7 @@ package com.qiyewan.crm_joint.domain;
 import lombok.Data;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -11,6 +12,7 @@ import java.util.TimeZone;
 @Entity(name = "m_website_customer")
 @Data
 public class WebsiteCustomer {
+    @Id
     private Long id;
     private String mobile;
     private String customerId;

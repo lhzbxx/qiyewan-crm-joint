@@ -3,6 +3,7 @@ package com.qiyewan.crm_joint.domain;
 import lombok.Data;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import java.util.Date;
@@ -10,6 +11,7 @@ import java.util.Date;
 @Entity(name = "m_customer")
 @Data
 public class Customer {
+    @Id
     private String id;
     private String area;
     private String status;

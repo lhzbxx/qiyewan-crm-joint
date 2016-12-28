@@ -15,4 +15,4 @@ spring:
         strategy: org.hibernate.cfg.ImprovedNamingStrategy
     properties:
       hibernate:
-        dialect:
+        dialect: org.hibernate.dialect.SQLServer2012Dialect
