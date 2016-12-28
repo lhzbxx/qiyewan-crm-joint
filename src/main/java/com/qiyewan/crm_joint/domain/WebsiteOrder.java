@@ -1,5 +1,7 @@
 package com.qiyewan.crm_joint.domain;
 
+import com.qiyewan.crm_joint.common.Order;
+import com.qiyewan.crm_joint.common.OrderDetail;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -17,11 +19,20 @@ public class WebsiteOrder {
     private String productName;
     private Integer productNumber;
     private Float productAmount;
-    private Float orderAmount;
     private Date startDate;
     private String status;
     private Date creDate = new Date();
     private Date synDate = new Date();
 
     public WebsiteOrder() {}
+
+    public WebsiteOrder(Order order, OrderDetail orderDetail) {
+        this.area = orderDetail.getRegion();
+        this.orderNo = order.getSerialId();
+        this.customerId = order.getUserId().toString();
+        this.productNo = orderDetail.getProductSerialId();
+        this.productName = orderDetail.getName();
+        this.productNumber = orderDetail.getAmount();
+        this.productAmount = orderDetail.getUnitPrice();
+    }
 }

@@ -2,8 +2,6 @@ package com.qiyewan.crm_joint.common;
 
 import lombok.Data;
 
-import java.math.BigDecimal;
-
 @Data
 public class OrderDetail {
     private Long id;
@@ -18,7 +16,7 @@ public class OrderDetail {
     // 数量
     private Integer amount;
     // 单价
-    private BigDecimal unitPrice;
+    private Float unitPrice;
     // 数量量词
     private String unit;
     // 描述
