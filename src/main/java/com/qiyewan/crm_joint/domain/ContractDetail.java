@@ -6,29 +6,23 @@ import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import java.util.Date;
-import java.util.UUID;
 
 @Entity(name = "t_contract_service_detail")
 @Data
 public class ContractDetail {
     private Long id;
-    private String area;
+    private String contractServiceId;
+    private String productServiceId;
+    private String productServiceName;
     private String status;
-    private String source;
-    private String type;
-    private String channel;
-    private String name;
-    private String mobile;
-    private String attention;
-    private String telephone;
-    private String fax;
-    private String email;
-    private String address;
-    private String uuid = UUID.randomUUID().toString();
+    private String memo;
+    private String creUser;
     @Temporal(TemporalType.TIMESTAMP)
-    private Date createAt = new Date();
+    private Date creDate;
+    private String updUser;
     @Temporal(TemporalType.TIMESTAMP)
-    private Date updateAt = new Date();
+    private Date updDate;
+    private String owner;
 
     public ContractDetail() {}
 }
