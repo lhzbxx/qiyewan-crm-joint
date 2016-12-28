@@ -3,6 +3,7 @@ package com.qiyewan.crm_joint.domain;
 import lombok.Data;
 
 import javax.persistence.Entity;
+import java.util.Date;
 
 @Entity(name = "t_contract_service")
 @Data
@@ -22,9 +23,9 @@ public class Contract {
     private String sysUuid;
     private String memo;
     private String creUser;
-    private String creDate;
+    private Date creDate;
     private String updUser;
-    private String updDate;
+    private Date updDate;
     private String owner;
 
     public Contract() {}

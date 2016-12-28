@@ -10,7 +10,7 @@ import java.util.Date;
 @Entity(name = "m_customer")
 @Data
 public class Customer {
-    private Long id;
+    private String id;
     private String area;
     private String status;
     private String source;
