@@ -13,6 +13,9 @@ public class Contract {
     private String contractSno;
     private String boPid;
     private String productSeries;
+    private String productName;
+    private String productCover;
+    private String productAmount;
     private String currentProductServiceNode;
     private String status;
     private String customerId;

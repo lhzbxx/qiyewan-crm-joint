@@ -17,6 +17,7 @@ public class WebsiteOrder {
     private String customerId;
     private String productNo;
     private String productName;
+    private String productCover;
     private Integer productNumber;
     private Float productAmount;
     private Date startDate;
@@ -33,6 +34,7 @@ public class WebsiteOrder {
         this.productNo = orderDetail.getProductSerialId();
         this.productName = orderDetail.getName();
         this.productNumber = orderDetail.getAmount();
+        this.productCover = orderDetail.getCover();
         this.productAmount = orderDetail.getUnitPrice();
     }
 }
