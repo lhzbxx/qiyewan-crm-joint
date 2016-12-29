@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface ContractDetailRepository extends JpaRepository<ContractDetail, Long> {
-    List<ContractDetail> findByContractSno(String contractSno);
+public interface ContractServiceRepository extends JpaRepository<ContractService, Long> {
+    List<ContractService> findByCustomerId(String customerId);
 }

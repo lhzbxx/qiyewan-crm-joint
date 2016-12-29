@@ -8,12 +8,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ContractServiceImpl implements com.qiyewan.crm_joint.service.ContractService {
+public class ContractServiceServiceImpl implements ContractServiceService {
     @Autowired
     private ContractServiceRepository contractServiceRepository;
 
     @Override
-    public List<ContractService> getContracts(String customerId) {
+    public List<ContractService> getContractServices(String customerId) {
         return contractServiceRepository.findByCustomerId(customerId);
     }
 }
