@@ -7,5 +7,5 @@ import java.util.List;
 
 @Repository
 public interface ContractServiceRepository extends JpaRepository<ContractService, Long> {
-    List<ContractService> findByCustomerId(String customerId);
+    List<ContractService> findByContractSno(String contractSno);
 }

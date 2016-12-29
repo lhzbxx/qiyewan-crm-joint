@@ -13,7 +13,7 @@ public class ContractServiceServiceImpl implements ContractServiceService {
     private ContractServiceRepository contractServiceRepository;
 
     @Override
-    public List<ContractService> getContractServices(String customerId) {
-        return contractServiceRepository.findByCustomerId(customerId);
+    public List<ContractService> getContractServices(String contractSno) {
+        return contractServiceRepository.findByContractSno(contractSno);
     }
 }
