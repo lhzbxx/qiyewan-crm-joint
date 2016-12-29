@@ -20,11 +20,6 @@ public class Customer {
     private String channel;
     private String name;
     private String mobile;
-    private String attention;
-    private String telephone;
-    private String fax;
-    private String email;
-    private String address;
     private String paymentNum;
     private String companyName;
     private String companyAddress;
@@ -32,7 +27,6 @@ public class Customer {
     private String registeredCapital;
     private String employees;
     private String businessLicense;
-    private String otherContact;
     private String intentionDate;
     private String formalDate;
     private String memo;

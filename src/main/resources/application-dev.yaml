@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:sqlserver://123.59.50.191:1433;databaseName=neoBay
+    url: jdbc:sqlserver://192.168.0.18:1433;databaseName=neoBay_dev_20161221
     username: sa
-    password: qiyewan2016
+    password: password1.
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
     initialize: false
   jpa:

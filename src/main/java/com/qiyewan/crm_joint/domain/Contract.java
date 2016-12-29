@@ -17,7 +17,8 @@ public class Contract {
     private String boPid;
     // 服务
     private String productSeries;
-    private String productAmount;
+//    为什么还是没有？
+//    private String productAmount;
     // 当前服务
     private String currentProductServiceNode;
     private String status;
