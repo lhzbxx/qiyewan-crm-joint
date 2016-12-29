@@ -8,7 +8,7 @@ import java.util.Date;
 
 @Entity(name = "t_contract_service_detail")
 @Data
-public class ContractDetail {
+public class ContractServiceDetail {
     @Id
     private Long id;
     private String contractServiceId;
@@ -26,5 +26,5 @@ public class ContractDetail {
     private Date updDate;
     private String owner;
 
-    public ContractDetail() {}
+    public ContractServiceDetail() {}
 }
