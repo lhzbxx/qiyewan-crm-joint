@@ -1,5 +1,6 @@
 package com.qiyewan.crm_joint.domain;
 
+import com.qiyewan.crm_joint.common.CityCode;
 import com.qiyewan.crm_joint.common.Order;
 import com.qiyewan.crm_joint.common.OrderDetail;
 import lombok.Data;
@@ -8,7 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Date;
 
-@Entity(name = "m_website_order")
+@Entity(name = "t_website_order")
 @Data
 public class WebsiteOrder {
     @Id
@@ -22,17 +23,19 @@ public class WebsiteOrder {
     private Integer productNumber;
     private Float productAmount;
     private Date startDate;
-    private String status;
+    private String status = "1";
     private Date creDate = new Date();
     private Date synDate = new Date();
 
     public WebsiteOrder() {}
 
-    public WebsiteOrder(Order order, OrderDetail orderDetail, String customerId) {
+    public WebsiteOrder(Order order, OrderDetail orderDetail, String mobile, String customerId) {
         this.id = order.getId();
-        this.area = orderDetail.getRegion();
+        this.area = CityCode.convert(orderDetail.getRegion().substring(0, 2));
+        this.mobile = mobile;
         this.orderNo = order.getSerialId();
         this.customerId = customerId;
+        this.startDate = order.getCreateAt();
         this.productNo = orderDetail.getProductSerialId();
         this.productName = orderDetail.getName();
         this.productNumber = orderDetail.getAmount();

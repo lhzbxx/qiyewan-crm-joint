@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:sqlserver://10.10.114.242;databaseName=neoBay
+    url: jdbc:sqlserver://10.10.114.242;databaseName=neoBay;useUnicode=true;characterEncoding=GBK
     username: sa
     password: qiyewan2016
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver

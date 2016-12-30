@@ -20,6 +20,7 @@ public class Customer {
     private String mobile;
     private String paymentNum;
     private String industry;
+    private String contactName;
     private String companyAddress;
     private String legalPerson;
     private String registeredCapital;

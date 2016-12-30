@@ -14,7 +14,7 @@ public class WebsiteCustomer {
     private Long id;
     private String mobile;
     private String customerId;
-    private String status;
+    private String status = "1";
     private Date creDate = new Date();
     private Date synDate = new Date();
 

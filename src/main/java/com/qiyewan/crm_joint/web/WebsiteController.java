@@ -26,9 +26,9 @@ public class WebsiteController {
 
     @CrossOrigin
     @PostMapping("/orders")
-    public String storeOrder(@RequestBody Order order, @RequestParam String customerId) {
+    public String storeOrder(@RequestBody Order order, @RequestParam String mobile, @RequestParam String customerId) {
         for (OrderDetail orderDetail: order.getDetails()) {
-            websiteOrderService.save(new WebsiteOrder(order, orderDetail, customerId));
+            websiteOrderService.save(new WebsiteOrder(order, orderDetail, mobile, customerId));
         }
         return "SUCCESS";
     }
