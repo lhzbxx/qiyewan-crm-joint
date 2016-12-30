@@ -4,7 +4,6 @@ import lombok.Data;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.util.Date;
 
 @Entity(name = "t_contract_service_detail")
 @Data
@@ -21,9 +20,9 @@ public class ContractServiceDetail {
     // 备注
     private String memo;
     private String creUser;
-    private Date creDate;
+    private String creDate;
     private String updUser;
-    private Date updDate;
+    private String updDate;
     private String owner;
 
     public ContractServiceDetail() {}
