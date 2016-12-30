@@ -29,6 +29,7 @@ public class WebsiteOrder {
     public WebsiteOrder() {}
 
     public WebsiteOrder(Order order, OrderDetail orderDetail, String customerId) {
+        this.id = order.getId();
         this.area = orderDetail.getRegion();
         this.orderNo = order.getSerialId();
         this.customerId = customerId;

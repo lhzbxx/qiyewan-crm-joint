@@ -21,6 +21,7 @@ public class WebsiteCustomer {
     public WebsiteCustomer() {}
 
     public WebsiteCustomer(User user) {
+        this.id = user.getId();
         this.mobile = user.getPhone();
         this.customerId = user.getCustomerId();
     }
