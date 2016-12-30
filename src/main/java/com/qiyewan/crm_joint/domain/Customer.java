@@ -4,8 +4,6 @@ import lombok.Data;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import java.util.Date;
 
 @Entity(name = "m_customer")
@@ -21,7 +19,7 @@ public class Customer {
     private String name;
     private String mobile;
     private String paymentNum;
-    private String companyName;
+    private String industry;
     private String companyAddress;
     private String legalPerson;
     private String registeredCapital;
@@ -32,10 +30,8 @@ public class Customer {
     private String memo;
     private String sysStatus;
     private String creUser;
-    @Temporal(TemporalType.TIMESTAMP)
     private Date cre_date;
     private String upd_user;
-    @Temporal(TemporalType.TIMESTAMP)
     private Date upd_date;
     private String owner;
 
