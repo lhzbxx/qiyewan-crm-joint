@@ -8,10 +8,7 @@ import com.qiyewan.crm_joint.domain.WebsiteOrder;
 import com.qiyewan.crm_joint.service.WebsiteCustomerService;
 import com.qiyewan.crm_joint.service.WebsiteOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class WebsiteController {
@@ -29,9 +26,9 @@ public class WebsiteController {
 
     @CrossOrigin
     @PostMapping("/orders")
-    public String storeOrder(@RequestBody Order order) {
+    public String storeOrder(@RequestBody Order order, @RequestParam String customerId) {
         for (OrderDetail orderDetail: order.getDetails()) {
-            websiteOrderService.save(new WebsiteOrder(order, orderDetail));
+            websiteOrderService.save(new WebsiteOrder(order, orderDetail, customerId));
         }
         return "SUCCESS";
     }

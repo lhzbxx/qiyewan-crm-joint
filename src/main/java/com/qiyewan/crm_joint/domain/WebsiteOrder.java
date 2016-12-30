@@ -28,10 +28,10 @@ public class WebsiteOrder {
 
     public WebsiteOrder() {}
 
-    public WebsiteOrder(Order order, OrderDetail orderDetail) {
+    public WebsiteOrder(Order order, OrderDetail orderDetail, String customerId) {
         this.area = orderDetail.getRegion();
         this.orderNo = order.getSerialId();
-        this.customerId = order.getUserId().toString();
+        this.customerId = customerId;
         this.productNo = orderDetail.getProductSerialId();
         this.productName = orderDetail.getName();
         this.productNumber = orderDetail.getAmount();
