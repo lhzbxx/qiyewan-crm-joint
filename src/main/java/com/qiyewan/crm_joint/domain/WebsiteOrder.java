@@ -30,7 +30,7 @@ public class WebsiteOrder {
     public WebsiteOrder() {}
 
     public WebsiteOrder(Order order, OrderDetail orderDetail, String mobile, String customerId) {
-        this.id = order.getId();
+        this.id = orderDetail.getId();
         this.area = CityCode.convert(orderDetail.getRegion().substring(0, 2));
         this.mobile = mobile;
         this.orderNo = order.getSerialId();
