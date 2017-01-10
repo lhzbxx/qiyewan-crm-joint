@@ -34,7 +34,6 @@ public class Customer {
     private Date cre_date;
     private String upd_user;
     private Date upd_date;
-    private String owner;
 
     public Customer() {}
 }
