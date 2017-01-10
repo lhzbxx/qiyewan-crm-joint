@@ -19,11 +19,8 @@ public class ContractServiceDetail {
     private String status;
     // 备注
     private String memo;
-    private String creUser;
     private String creDate;
-    private String updUser;
     private String updDate;
-    private String owner;
 
     public ContractServiceDetail() {}
 }

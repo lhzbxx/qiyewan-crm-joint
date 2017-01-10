@@ -27,11 +27,8 @@ public class ContractService {
     private String sysStatus;
     private String sysUuid;
     private String memo;
-    private String creUser;
     private Date creDate;
-    private String updUser;
     private Date updDate;
-    private String owner;
 
     public ContractService() {}
 }
