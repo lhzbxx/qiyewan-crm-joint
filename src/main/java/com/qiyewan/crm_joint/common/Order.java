@@ -21,6 +21,8 @@ public class Order {
     private String payment;
     // 订单状态
     private String orderStage;
+    // 备注
+    private String comment;
     // 总价
     private BigDecimal totalPrice;
     @Temporal(TemporalType.TIMESTAMP)

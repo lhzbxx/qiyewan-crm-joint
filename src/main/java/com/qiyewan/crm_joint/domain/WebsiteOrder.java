@@ -23,6 +23,7 @@ public class WebsiteOrder {
     private Integer productNumber;
     private Float productAmount;
     private Date startDate;
+    private String comment;
     private String status = "1";
     private Date creDate = new Date();
     private Date synDate = new Date();
@@ -36,6 +37,7 @@ public class WebsiteOrder {
         this.orderNo = order.getSerialId();
         this.customerId = customerId;
         this.startDate = order.getCreateAt();
+        this.comment = order.getComment();
         this.productNo = orderDetail.getProductSerialId();
         this.productName = orderDetail.getName();
         this.productNumber = orderDetail.getAmount();
